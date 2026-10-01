@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "wgs-distance"
+version = "0.1"
+description = "WGS-84 Distance Calculator"
+requires-python = ">=3.8"
+dependencies = ["PyQt5~=5.15.11"]
+
+[project.urls]
+Homepage = "https://github.com/Jararered/wgs_distance"
+
+[[project.authors]]
+name = "Jared Nichols"
+email = "Jararered@icloud.com"
+
+[project.scripts]
+wgs-distance = "gui:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+py-modules = ["gui", "great_circle", "lambert", "vincenty", "vincenty_mod"]

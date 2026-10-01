@@ -243,12 +243,18 @@ def calculate():
 
 calculateButton.clicked.connect(calculate)
 
-layout = QVBoxLayout()
-layout.addLayout(sec1)
-layout.addLayout(sec2)
-layout.addLayout(sec3)
-window.setLayout(layout)
 
-# Displaying the window
-window.show()
-app.exec()
+def main():
+    layout = QVBoxLayout()
+    layout.addLayout(sec1)
+    layout.addLayout(sec2)
+    layout.addLayout(sec3)
+    window.setLayout(layout)
+
+    # Displaying the window
+    window.show()
+    app.exec()
+
+
+if __name__ == "__main__":
+    main()
